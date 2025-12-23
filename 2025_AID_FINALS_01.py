@@ -177,7 +177,7 @@ if student_id:
     data = get_student_data(student_id)
     
     if data is not None:
-        to_show = data.set_index("메일")
+        to_show = data.set_index("e-mail")
         st.write("E-mail: ", to_show.index[0])
         s = to_show.style.format({"Expense": lambda x : '{:.4f}'.format(x)})
         st.dataframe(s, hide_index=True)
